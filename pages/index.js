@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className="py-20">
-          <h1 className="text-5xl text-center text-green-700">
+          <h1 className="text-5xl text-center text-green-700 bg-black">
             Next.js + Tailwind CSS
           </h1>
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
