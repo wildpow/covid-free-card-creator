@@ -11,3 +11,24 @@ h6 {
   font-family: "Black Han Sans", sans-serif;
 }
 /* box-sizing: border-box; */
+.bottom-line::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  background: black;
+  height: 7em;
+  z-index: -1;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 66%;
+  background: #ffb90d;
+  height: 26px;
+  z-index: -1;
+}
