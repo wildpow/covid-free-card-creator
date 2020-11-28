@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Layout({ children }) {
   return (
@@ -34,6 +35,14 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer>Made with Love by Wildpow (FOOTER)</footer>
+
+      <Image
+        src="/images/scared-covid.png"
+        alt="Cartoon elf"
+        layout="responsive"
+        width={650}
+        height={400}
+      />
     </div>
   );
 }

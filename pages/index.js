@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </article>
       <article
-        className="relative grid max-w-6xl grid-cols-4 grid-rows-2 gap-10 py-16 mx-auto my-10"
+        className="relative grid max-w-5xl grid-cols-4 grid-rows-2 gap-10 py-20 mx-auto my-20"
         style={{ height: "50vh" }}
       >
         <div className="self-center pl-10 justify-self-center">
@@ -130,15 +130,77 @@ export default function Home() {
           Even our components are socially distanced!
         </p>
       </article>
-      <article style={{ height: "40vh" }}>
-        <div>
-          <h2 className="relative w-full pb-2 text-6xl text-center heading">
-            How does it work?
-          </h2>
-          <p className="text-3xl leading-10 mb-14">
+      <article
+        className="relative flex py-20 my-20 overflow-hidden"
+        style={{ height: "60vh" }}
+      >
+        <div className="relative flex flex-col max-w-5xl mx-auto heading">
+          <h2 className="pb-2 mb-12 text-6xl ">How does it work?</h2>
+          <p className="max-w-2xl text-3xl leading-10 mb-14">
             Pick background theme and colors. Fill in title, message and date.
             Share, print or save. (COMING SOON)
           </p>
+          <Link href="/create">
+            <a className="flex items-center justify-center max-w-sm px-0 py-2 text-3xl leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105">
+              <div className="h14">Try it out</div>
+              <div className="w-10 h-12 ml-6 text-white">
+                <Hand />
+              </div>
+            </a>
+          </Link>
+        </div>
+        <div
+          className="absolute top-0 right-0"
+          style={{
+            width: "500px",
+            height: "500px",
+            right: "-164px",
+            zIndex: "-1",
+          }}
+        >
+          <Image
+            src="/images/elf.jpg"
+            alt="Cartoon elf"
+            layout="responsive"
+            width={750}
+            height={900}
+          />
+        </div>
+      </article>
+      <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
+        <div className="relative flex flex-col max-w-5xl mx-auto heading">
+          <h2 className="pb-0 mb-0 text-6xl ">What are people saying?</h2>
+        </div>
+      </article>
+      <article
+        className="relative grid grid-cols-2 grid-rows-2 gap-10 py-20 my-20 overflow-hidden"
+        style={{ height: "60vh" }}
+      >
+        <div className="-ml-20" style={{ width: "600px", height: "400px" }}>
+          <Image
+            src="/images/santa-s-sleigh.jpg"
+            alt="Cartoon elf"
+            layout="responsive"
+            width={650}
+            height={400}
+          />
+        </div>
+        <div className="flex flex-col self-start p-10 -ml-24 text-3xl leading-10 border-4 rounded-lg shadow-xl justify-self-start">
+          <q className="mb-12">When humor goes, there goes civilization.</q>
+          <span className="self-end">- Erma Bombeck</span>
+        </div>
+        <div className="flex flex-col self-end p-10 ml-20 -mb-10 text-3xl leading-10 border-4 rounded-lg shadow-xl">
+          <q className="mb-12">
+            I think the next best thing to solving a problem is finding some
+            humor in it.
+          </q>
+          <span className="self-end">- Frank A, Clark</span>
+        </div>
+        <div className="flex flex-col self-center p-10 mb-20 text-3xl leading-10 border-4 rounded-lg shadow-xl justify-self-center">
+          <q className="mb-12">
+            Humor is just another defence against the universe.
+          </q>
+          <span className="self-end">- Mel Brooks</span>
         </div>
       </article>
     </Layout>
