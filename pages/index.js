@@ -23,12 +23,12 @@ export default function Home() {
         </div>
         <div className="w-1/2 flex flex-col h-full, mb-0 content-center items-center justify-items-center justify-center">
           <div className="flex flex-col max-w-3xl p-10 pt-0">
-            <h1 className="mb-12 text-8xl">
+            <h1 className="mb-12 text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
               Covid Free
               <br />
               Card Creator
             </h1>
-            <p className="text-3xl leading-10 mb-14">
+            <p className="text-2xl leading-10 xl:text-3xl mb-14">
               Create environmentally friendly greeting cards while in
               quarantine. Come on what else are you going to do?
             </p>

@@ -10,9 +10,9 @@ export default function Layout({ children }) {
       </Head>
       <div className="content">
         <header className="py-6 bg-santa-red">
-          <nav className="flex justify-between mx-auto text-2xl text-white max-w-screen-2xl font-heading ">
+          <nav className="flex justify-between px-10 mx-auto text-2xl text-white 2xl:justify-end max-w-screen-2xl font-heading 2xl:px-0">
             <Link href="/">
-              <a className="transition duration-500 ease-in-out hover:text-black">
+              <a className="transition duration-500 ease-in-out 2xl:px-5 hover:text-black">
                 Home
               </a>
             </Link>
