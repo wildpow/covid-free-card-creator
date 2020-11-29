@@ -5,41 +5,43 @@ import Image from "next/image";
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="global-container">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="py-6 bg-santa-red">
-        <nav className="flex justify-between mx-auto text-2xl text-white max-w-screen-2xl font-heading ">
-          <Link href="/">
-            <a className="transition duration-500 ease-in-out hover:text-black">
-              Home
-            </a>
-          </Link>
-          <ul className="flex">
-            <li className="px-5 transition duration-500 ease-in-out hover:text-black">
-              <Link href="/create">
-                <a>Create</a>
-              </Link>
-            </li>
-            <li className="px-5 transition duration-500 ease-in-out hover:text-black">
-              <Link href="/roadmap">
-                <a>Roadmap</a>
-              </Link>
-            </li>
-            <li className="px-5 pr-0 transition duration-500 ease-in-out hover:text-black">
-              <a
-                href="https://github.com/wildpow/covid-free-card-creator"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Repo
+      <div className="content">
+        <header className="py-6 bg-santa-red">
+          <nav className="flex justify-between mx-auto text-2xl text-white max-w-screen-2xl font-heading ">
+            <Link href="/">
+              <a className="transition duration-500 ease-in-out hover:text-black">
+                Home
               </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>{children}</main>
+            </Link>
+            <ul className="flex">
+              <li className="px-5 transition duration-500 ease-in-out hover:text-black">
+                <Link href="/create">
+                  <a>Create</a>
+                </Link>
+              </li>
+              <li className="px-5 transition duration-500 ease-in-out hover:text-black">
+                <Link href="/roadmap">
+                  <a>Roadmap</a>
+                </Link>
+              </li>
+              <li className="px-5 pr-0 transition duration-500 ease-in-out hover:text-black">
+                <a
+                  href="https://github.com/wildpow/covid-free-card-creator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Repo
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>{children}</main>
+      </div>
       <footer
         className="relative flex py-10 overflow-hidden"
         style={{ height: "350px" }}
@@ -69,6 +71,6 @@ export default function Layout({ children }) {
           />
         </div>
       </footer>
-    </>
+    </div>
   );
 }
