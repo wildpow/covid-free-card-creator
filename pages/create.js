@@ -8,6 +8,10 @@ export default function CreateCard() {
         <title>Card Creator -- Create Card</title>
       </Head>
       <h2>Create Card</h2>
+      <form action="">
+        <input type="date" name="" id="" />
+        <textarea name="" id="" cols="30" rows="10" />
+      </form>
     </Layout>
   );
 }
