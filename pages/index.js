@@ -5,6 +5,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import Hand from "../components/hand";
 import styles from "../styles/Home.module.css";
+import Hero from "../components/home/hero";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <Head>
         <title>Card Creator -- Christmas Editions</title>
       </Head>
-      <article className="relative flex h-full pb-8 -ml-10 overflow-hidden bottom-line">
+      <Hero />
+      {/* <article className="relative flex h-full pb-8 -ml-10 overflow-hidden bottom-line">
         <div className={`${styles.santaHero} md:w-1/2 w-4/12`}>
           <Image
             src="/images/santa.png"
@@ -43,8 +45,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </article>
-      <article
+      </article> */}
+      {/* <article
         className="relative grid max-w-5xl grid-cols-4 grid-rows-2 py-20 mx-auto my-20 md:gap-10"
         style={{ height: "80vh" }}
       >
@@ -130,8 +132,8 @@ export default function Home() {
         >
           Even our components are socially distanced!
         </p>
-      </article>
-      <article
+      </article> */}
+      {/* <article
         className="relative flex py-20 my-20 overflow-hidden"
         style={{ height: "60vh" }}
       >
@@ -163,8 +165,8 @@ export default function Home() {
             height={900}
           />
         </div>
-      </article>
-      <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
+      </article> */}
+      {/* <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
         <div className="relative flex flex-col max-w-5xl mx-auto heading2">
           <h2 className="pb-0 mb-0 md:text-6xl ">What are people saying?</h2>
         </div>
@@ -216,7 +218,7 @@ export default function Home() {
           </q>
           <span className="self-end">- George Bernard Shaw</span>
         </div>
-      </article>
+      </article> */}
     </Layout>
   );
 }
