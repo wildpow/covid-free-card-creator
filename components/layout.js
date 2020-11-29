@@ -10,24 +10,24 @@ export default function Layout({ children }) {
       </Head>
       <div className="content">
         <header className="py-6 bg-santa-red">
-          <nav className="flex justify-between px-10 mx-auto text-2xl text-white 2xl:justify-end max-w-screen-2xl font-heading 2xl:px-0">
+          <nav className="flex mx-auto text-white md:justify-between md:px-10 md:text-base lg:text-xl 2xl:justify-end max-w-screen-2xl font-heading 2xl:px-0 2xl:text-3xl">
             <Link href="/">
               <a className="transition duration-500 ease-in-out 2xl:px-5 hover:text-black">
                 Home
               </a>
             </Link>
             <ul className="flex">
-              <li className="px-5 transition duration-500 ease-in-out hover:text-black">
+              <li className="transition duration-500 ease-in-out md:px-5 hover:text-black">
                 <Link href="/create">
                   <a>Create</a>
                 </Link>
               </li>
-              <li className="px-5 transition duration-500 ease-in-out hover:text-black">
+              <li className="transition duration-500 ease-in-out md:px-5 hover:text-black">
                 <Link href="/roadmap">
                   <a>Roadmap</a>
                 </Link>
               </li>
-              <li className="px-5 pr-0 transition duration-500 ease-in-out hover:text-black">
+              <li className="pr-0 transition duration-500 ease-in-out md:px-5 hover:text-black">
                 <a
                   href="https://github.com/wildpow/covid-free-card-creator"
                   target="_blank"
@@ -60,7 +60,7 @@ export default function Layout({ children }) {
             Wildpow
           </a>
         </p>
-        <div className="absolute -bottom-3 -right-2" style={{ width: "300px" }}>
+        <div className="absolute -bottom-3 -right-2 covidGuy">
           <Image
             src="/images/scared-covid.png"
             alt="Cartoon elf"

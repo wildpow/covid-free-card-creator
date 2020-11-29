@@ -1,1 +1,40 @@
+.quoteCard {
+  @apply relative flex flex-col max-w-lg p-10 bg-white border-2 border-gray-500 shadow-xl md:leading-10 md:text-3xl rounded-3xl;
+}
 
+.quoteCard::before {
+  height: 30px;
+  font-family: Helvetica, Neue;
+  position: absolute;
+  top: 22px;
+  font-weight: bold;
+  left: 10px;
+  color: #8b8f90;
+  content: "“";
+  font-size: 5em;
+}
+
+.elfImage {
+  width: 50px;
+  height: 20px;
+}
+.santaSled {
+  width: 50px;
+  height: 20px;
+}
+@media (min-width: 768px) {
+  .santaSled {
+    width: 750px;
+    height: 400px;
+  }
+  .elfImage {
+    width: 500px;
+    height: 500px;
+    right: -164px;
+    zindex: -1;
+  }
+}
+
+.santaHero {
+  padding-top: 20px;
+}

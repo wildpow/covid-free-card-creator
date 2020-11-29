@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Hand from "../components/hand";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <title>Card Creator -- Christmas Editions</title>
       </Head>
       <article className="relative flex h-full pb-8 -ml-10 overflow-hidden bottom-line">
-        <div className="w-1/2 ">
+        <div className={`${styles.santaHero} md:w-1/2 w-4/12`}>
           <Image
             src="/images/santa.png"
             alt="Picture of the author"
@@ -21,21 +22,21 @@ export default function Home() {
             height={900}
           />
         </div>
-        <div className="w-1/2 flex flex-col h-full, mb-0 content-center items-center justify-items-center justify-center">
-          <div className="flex flex-col max-w-3xl p-10 pt-0">
-            <h1 className="mb-12 text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <div className="w-8/12 md:w-1/2 flex flex-col h-full, mb-0 content-center items-center justify-items-center justify-center">
+          <div className="flex flex-col max-w-3xl pt-0 md:p-10">
+            <h1 className="sm:text-3xl md:mb-12 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
               Covid Free
               <br />
               Card Creator
             </h1>
-            <p className="text-2xl leading-10 xl:text-3xl mb-14">
+            <p className="leading-normal md:leading-10 md:text-2xl xl:text-3xl md:mb-14">
               Create environmentally friendly greeting cards while in
               quarantine. Come on what else are you going to do?
             </p>
             <Link href="/create">
-              <a className="flex items-center justify-center max-w-sm px-0 py-2 text-3xl leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105">
+              <a className="btn">
                 <div className="h14">Try it out</div>
-                <div className="w-10 h-12 ml-6 text-white">
+                <div className="w-4 h-6 ml-6 text-white md:w-10 md:h-12">
                   <Hand />
                 </div>
               </a>
@@ -44,10 +45,10 @@ export default function Home() {
         </div>
       </article>
       <article
-        className="relative grid max-w-5xl grid-cols-4 grid-rows-2 gap-10 py-20 mx-auto my-20"
-        style={{ height: "50vh" }}
+        className="relative grid max-w-5xl grid-cols-4 grid-rows-2 py-20 mx-auto my-20 md:gap-10"
+        style={{ height: "80vh" }}
       >
-        <div className="self-center pl-10 justify-self-center">
+        <div className="self-center md:pl-10 justify-self-center">
           <Image
             src="/images/arrowupbrown.png"
             alt=""
@@ -120,7 +121,7 @@ export default function Home() {
           />
         </div>
         <p
-          className="absolute w-full col-span-1 row-span-1 text-6xl leading-snug text-center font-heading"
+          className="absolute w-full col-span-1 row-span-1 leading-snug text-center md:text-6xl font-heading"
           style={{
             top: "50%",
             left: "50%",
@@ -135,15 +136,17 @@ export default function Home() {
         style={{ height: "60vh" }}
       >
         <div className="relative flex flex-col max-w-5xl mx-auto heading">
-          <h2 className="pb-2 mb-12 text-6xl ">How does it work?</h2>
-          <p className="max-w-2xl text-3xl leading-10 mb-14">
+          <h2 className="pb-2 mb-12 md:text-6xl ">How does it work?</h2>
+          <p className="max-w-2xl md:leading-10 md:text-3xl mb-14">
             Pick background theme and colors. Fill in title, message and date.
             Share, print or save *
             <br />
-            <span className="text-lg">* Some features coming soon</span>
+            <span className="font-bold md:text-lg">
+              * Some features coming soon
+            </span>
           </p>
           <Link href="/create">
-            <a className="flex items-center justify-center max-w-sm px-0 py-2 text-3xl leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105">
+            <a className="btn">
               <div className="h14">Try it out</div>
               <div className="w-10 h-12 ml-6 text-white">
                 <Hand />
@@ -151,15 +154,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <div
-          className="absolute top-0 right-0"
-          style={{
-            width: "500px",
-            height: "500px",
-            right: "-164px",
-            zIndex: "-1",
-          }}
-        >
+        <div className={`${styles.elfImage} absolute right-0 top-12`}>
           <Image
             src="/images/elf.jpg"
             alt="Cartoon elf"
@@ -171,38 +166,55 @@ export default function Home() {
       </article>
       <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
         <div className="relative flex flex-col max-w-5xl mx-auto heading2">
-          <h2 className="pb-0 mb-0 text-6xl ">What are people saying?</h2>
+          <h2 className="pb-0 mb-0 md:text-6xl ">What are people saying?</h2>
         </div>
       </article>
       <article
-        className="relative grid grid-cols-2 grid-rows-2 gap-10 py-20 my-20 overflow-hidden"
-        style={{ height: "60vh" }}
+        className="relative grid grid-cols-4 grid-rows-4 gap-10 py-20 my-20 overflow-hidden"
+        style={{ height: "80vh" }}
       >
-        <div className="-ml-20" style={{ width: "600px", height: "400px" }}>
+        <div className={`${styles.santaSled} -ml-20`}>
           <Image
             src="/images/santa-s-sleigh.jpg"
             alt="Cartoon elf"
             layout="responsive"
-            width={650}
-            height={400}
+            width={750}
+            height={450}
           />
         </div>
-        <div className="flex flex-col self-start p-10 -ml-24 text-3xl leading-10 border-4 rounded-lg shadow-xl justify-self-start">
+        <div
+          className={` ${styles.quoteCard}  row-start-1 row-end-2 col-start-2 col-span-3 md:mt-24 self-start justify-self-center mr-44 `}
+        >
           <q className="mb-12">When humor goes, there goes civilization.</q>
           <span className="self-end">- Erma Bombeck</span>
         </div>
-        <div className="flex flex-col self-end p-10 ml-20 -mb-10 text-3xl leading-10 border-4 rounded-lg shadow-xl">
+        <div
+          className={` ${styles.quoteCard} row-start-3 row-end-4 col-start-3 col-span-3 md:mr-20 self-start`}
+          style={{ maxWidth: "fit-content" }}
+        >
           <q className="mb-12">
             I think the next best thing to solving a problem is finding some
             humor in it.
           </q>
           <span className="self-end">- Frank A, Clark</span>
         </div>
-        <div className="flex flex-col self-center p-10 mb-20 text-3xl leading-10 border-4 rounded-lg shadow-xl justify-self-center">
+        <div
+          className={` ${styles.quoteCard} self-start col-start-4 row-start-1 row-span-2`}
+        >
           <q className="mb-12">
             Humor is just another defence against the universe.
           </q>
           <span className="self-end">- Mel Brooks</span>
+        </div>
+        <div
+          className={` ${styles.quoteCard} row-start-3 row-end-4 col-start-1 col-span-2 mt-20 md:ml-12 self-start`}
+          style={{ maxWidth: "fit-content" }}
+        >
+          <q className="mb-12">
+            Life does not cease to be funny when people die any more than it
+            ceases to be serious when people laugh.
+          </q>
+          <span className="self-end">- George Bernard Shaw</span>
         </div>
       </article>
     </Layout>

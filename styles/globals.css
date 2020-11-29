@@ -13,6 +13,7 @@ body {
 }
 .content {
   flex: 1 0 auto;
+  width: 100%;
 }
 footer {
   flex-shrink: 0;
@@ -29,14 +30,19 @@ h6 {
 .bottom-line::after {
   content: "";
   position: absolute;
-  bottom: 10px;
   left: 0;
   width: 100%;
   background: black;
-  height: 7em;
+  height: 2em;
+  bottom: 0px;
   z-index: -1;
 }
-
+@media (min-width: 768px) {
+  .bottom-line::after {
+    height: 7em;
+    bottom: 10px;
+  }
+}
 .heading::after {
   content: "";
   position: absolute;
@@ -57,4 +63,18 @@ h6 {
   background: #ffb90d;
   height: 26px;
   z-index: -1;
+}
+
+.covidGuy {
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .covidGuy {
+    width: 300px;
+  }
+}
+
+.btn {
+  @apply flex items-center justify-center max-w-sm px-0 py-2 leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md md:text-3xl font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105;
 }
