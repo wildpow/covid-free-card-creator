@@ -138,7 +138,9 @@ export default function Home() {
           <h2 className="pb-2 mb-12 text-6xl ">How does it work?</h2>
           <p className="max-w-2xl text-3xl leading-10 mb-14">
             Pick background theme and colors. Fill in title, message and date.
-            Share, print or save. (COMING SOON)
+            Share, print or save *
+            <br />
+            <span className="text-lg">* Some features coming soon</span>
           </p>
           <Link href="/create">
             <a className="flex items-center justify-center max-w-sm px-0 py-2 text-3xl leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105">
@@ -168,7 +170,7 @@ export default function Home() {
         </div>
       </article>
       <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
-        <div className="relative flex flex-col max-w-5xl mx-auto heading">
+        <div className="relative flex flex-col max-w-5xl mx-auto heading2">
           <h2 className="pb-0 mb-0 text-6xl ">What are people saying?</h2>
         </div>
       </article>
