@@ -1,19 +1,14 @@
 import Image from "next/image";
 import styles from "./Quotes.module.css";
+import Heading from "../heading";
 
 export default function Quotes() {
   return (
     <article>
-      <div className={`${styles.headingWrapper} w-full justify-center flex`}>
-        <h2
-          className={`${styles.headingLine} mb-10 text-xl sm:text-2xl md:text-4xl lg:text-6xl lg:mb-10 xl:mb-16`}
-        >
-          What are people saying?
-        </h2>
-      </div>
+      <Heading text=" What are people saying?" />
       <div className={`${styles.quotesWrapper}`}>
         <div
-          className={` ${styles.quoteCard} w-10/12 self-center  xsm:w-12/12  xsm:self-start md:w-full md:self-center md:m-auto`}
+          className={`${styles.quoteCard} w-10/12 self-center  xsm:w-12/12  xsm:self-start md:w-full md:self-center md:m-auto`}
         >
           <q>
             I think the next best thing to solving a problem is finding some

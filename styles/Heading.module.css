@@ -1,0 +1,47 @@
+.headingWrapper {
+  @apply relative;
+}
+.headingWrapper::before {
+  content: "";
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply absolute left-0 w-1/2 bg-santa-yellow;
+}
+.headingLine {
+  position: relative;
+  display: inline-block;
+}
+
+.headingLine::before {
+  content: "";
+  left: 0;
+  width: 102%;
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply absolute bg-santa-yellow;
+}
+
+@media (min-width: 640px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 22px;
+    top: 19px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 30px;
+    top: 30px;
+  }
+}

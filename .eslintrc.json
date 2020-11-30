@@ -32,7 +32,8 @@
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "import/core-modules": ["prop-types"]
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
