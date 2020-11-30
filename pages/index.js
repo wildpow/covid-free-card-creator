@@ -5,7 +5,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import Hand from "../components/hand";
 import styles from "../styles/Home.module.css";
-import Hero from "../components/home/hero";
+import { Hero, Distanced } from "../components/home";
 
 export default function Home() {
   return (
@@ -14,93 +14,7 @@ export default function Home() {
         <title>Card Creator -- Christmas Editions</title>
       </Head>
       <Hero />
-      {/* <article
-        className="relative grid max-w-5xl grid-cols-4 grid-rows-2 py-20 mx-auto my-20 md:gap-10"
-        style={{ height: "80vh" }}
-      >
-        <div className="self-center md:pl-10 justify-self-center">
-          <Image
-            src="/images/arrowupbrown.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-end pb-3 justify-self-center">
-          <Image
-            src="/images/arrowupyellow.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-start pt-4 justify-self-center">
-          <Image
-            src="/images/arrowupred.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-center pt-20 justify-self-center">
-          <Image
-            src="/images/arrowupyellow.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-start pr-10 justify-self-center">
-          <Image
-            src="/images/arrowdowngold.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-center justify-self-start">
-          <Image
-            src="/images/arrowdownred.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-start pt-2 justify-self-start">
-          <Image
-            src="/images/arrowdowngold.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <div className="self-end pb-8 justify-self-start">
-          <Image
-            src="/images/arrowdownbrown.png"
-            alt=""
-            width="80"
-            height="102"
-            layout="fixed"
-          />
-        </div>
-        <p
-          className="absolute w-full col-span-1 row-span-1 leading-snug text-center md:text-6xl font-heading"
-          style={{
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          Even our components are socially distanced!
-        </p>
-      </article> */}
+      <Distanced />
       {/* <article
         className="relative flex py-20 my-20 overflow-hidden"
         style={{ height: "60vh" }}

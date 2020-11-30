@@ -1,0 +1,26 @@
+.distanceRoot {
+  height: 50vh;
+  overflow: hidden;
+  @apply mb-16;
+}
+
+.arrowWrapper {
+  width: 50px;
+  height: 50px;
+}
+
+@media (orientation: landscape) {
+  .distanceRoot {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .distanceRoot {
+    height: 60vh;
+  }
+  .arrowWrapper {
+    width: 80px;
+    height: 102px;
+  }
+}
