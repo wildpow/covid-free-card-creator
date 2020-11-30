@@ -56,6 +56,9 @@
   }
 }
 @media (min-width: 768px) {
+  .howItWorksRoot {
+    @apply mb-64;
+  }
   .headingLine::before,
   .howItWorksRoot::before {
     height: 22px;
@@ -80,14 +83,15 @@
 
 @media (min-width: 1280px) {
   .howItWorksRoot {
-    justify-content: flex-end;
+    justify-content: center;
   }
   .howItWorksWrapper {
     width: 100%;
+    align-items: center;
   }
 }
 
-@media (min-width: 1536px) {
+/* @media (min-width: 1536px) {
   .howItWorksRoot {
     background-position: 122%;
     justify-content: center;
@@ -95,4 +99,4 @@
   .howItWorksWrapper {
     align-items: center;
   }
-}
+} */

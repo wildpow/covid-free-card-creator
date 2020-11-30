@@ -1,0 +1,111 @@
+.quotesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  overflow: hidden;
+}
+.santaSled {
+  width: 300px;
+  height: 100px;
+  margin-left: -25px;
+}
+.quoteCard {
+  @apply md:leading-10 md:text-3xl;
+  @apply relative flex flex-col max-w-lg p-4 m-4 bg-white border-2 border-gray-400 shadow-md rounded-3xl md:max-w-2xl;
+}
+
+.quoteCard::before {
+  height: 30px;
+  font-family: Helvetica, Neue;
+  position: absolute;
+  top: -40px;
+  font-weight: bold;
+  left: 15px;
+  content: "“";
+  font-size: 5em;
+}
+
+.headingWrapper {
+  @apply relative;
+}
+.headingWrapper::before {
+  content: "";
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply absolute left-0 w-1/2 bg-santa-yellow;
+}
+.headingLine {
+  position: relative;
+  display: inline-block;
+}
+
+.headingLine::before {
+  content: "";
+  left: 0;
+  width: 102%;
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply absolute bg-santa-yellow;
+}
+
+@media (min-width: 640px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 22px;
+    top: 19px;
+  }
+  .quoteCard::before {
+    top: 8px;
+  }
+  .quoteCard {
+    @apply p-10;
+  }
+  .santaSled {
+    width: 450px;
+    height: 100px;
+    margin-left: -25px;
+  }
+  .quotesWrapper {
+    @apply mb-28;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headingLine::before,
+  .headingWrapper::before {
+    height: 30px;
+    top: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .quotesWrapper {
+    @apply mx-auto max-w-screen-2xl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .santaSled {
+    width: 670px;
+    height: 100px;
+    margin-left: -105px;
+  }
+  .quoteCard {
+    max-width: fit-content;
+  }
+}
+@media (min-width: 1280px) {
+  .cardConflict {
+    width: 80%;
+  }
+}

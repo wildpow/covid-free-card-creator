@@ -18,6 +18,7 @@
 @media (min-width: 768px) {
   .distanceRoot {
     height: 60vh;
+    @apply mb-52;
   }
   .arrowWrapper {
     width: 80px;
