@@ -14,38 +14,6 @@ export default function Home() {
         <title>Card Creator -- Christmas Editions</title>
       </Head>
       <Hero />
-      {/* <article className="relative flex h-full pb-8 -ml-10 overflow-hidden bottom-line">
-        <div className={`${styles.santaHero} md:w-1/2 w-4/12`}>
-          <Image
-            src="/images/santa.png"
-            alt="Picture of the author"
-            layout="responsive"
-            width={750}
-            height={900}
-          />
-        </div>
-        <div className="w-8/12 md:w-1/2 flex flex-col h-full, mb-0 content-center items-center justify-items-center justify-center">
-          <div className="flex flex-col max-w-3xl pt-0 md:p-10">
-            <h1 className="sm:text-3xl md:mb-12 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-              Covid Free
-              <br />
-              Card Creator
-            </h1>
-            <p className="leading-normal md:leading-10 md:text-2xl xl:text-3xl md:mb-14">
-              Create environmentally friendly greeting cards while in
-              quarantine. Come on what else are you going to do?
-            </p>
-            <Link href="/create">
-              <a className="btn">
-                <div className="h14">Try it out</div>
-                <div className="w-4 h-6 ml-6 text-white md:w-10 md:h-12">
-                  <Hand />
-                </div>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </article> */}
       {/* <article
         className="relative grid max-w-5xl grid-cols-4 grid-rows-2 py-20 mx-auto my-20 md:gap-10"
         style={{ height: "80vh" }}

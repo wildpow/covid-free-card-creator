@@ -26,7 +26,6 @@ h5,
 h6 {
   font-family: "Black Han Sans", sans-serif;
 }
-/* box-sizing: border-box; */
 .bottom-line::after {
   content: "";
   position: absolute;
@@ -36,6 +35,11 @@ h6 {
   height: 2em;
   bottom: 0px;
   z-index: -1;
+}
+.covidGuy {
+  width: 85px;
+  height: 85px;
+  @apply -mr-1;
 }
 @media (min-width: 768px) {
   .bottom-line::after {
@@ -65,18 +69,40 @@ h6 {
   z-index: -1;
 }
 
-.covidGuy {
-  width: 50px;
+.footer__text {
+  position: relative;
 }
-
+.footer__text::after {
+  content: "";
+  position: absolute;
+  @apply bg-santa-yellow;
+  height: 30px;
+  width: 100%;
+  top: calc(50% + 8px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 @media (min-width: 768px) {
+  .footer__text {
+    height: 150px;
+  }
   .covidGuy {
-    width: 300px;
+    width: 150px;
+    height: 150px;
+    @apply right-0 -mb-3 -mr-2 -bottom-2;
+  }
+  .footer__text::after {
+    height: 50px;
+    top: calc(50% + 19px);
   }
 }
 
 .btn {
-  @apply flex items-center justify-center max-w-sm px-0 py-2 leading-none text-center text-white transition duration-500 ease-in-out transform border-4 border-black rounded-sm shadow-md md:text-3xl font-heading bg-santa-red hover:shadow-xl hover:-translate-y-1 hover:scale-105;
+  @apply flex items-center justify-center max-w-sm px-0 py-2 leading-none;
+  @apply text-center text-white border-4 border-black bg-santa-red;
+  @apply hover:shadow-xl hover:-translate-y-1 hover:scale-105 md:text-3xl;
+  @apply transition duration-500 ease-in-out transform rounded-sm shadow-md font-heading;
 }
 .btn2 {
   @apply flex items-center justify-center py-2 text-center text-white;
@@ -85,4 +111,8 @@ h6 {
   @apply hover:-translate-y-1 hover:scale-105;
   @apply md:self-start md:px-7 md:py-3 md:text-2xl;
   @apply lg:py-4 lg:px-11 lg:text-3xl;
+}
+
+.nav__Link {
+  @apply leading-none transition duration-500 ease-in-out hover:text-black;
 }

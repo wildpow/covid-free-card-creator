@@ -9,43 +9,32 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="content">
-        <header className="py-6 bg-santa-red">
-          <nav className="flex mx-auto text-white md:justify-between md:px-10 md:text-base lg:text-xl 2xl:justify-end max-w-screen-2xl font-heading 2xl:px-0 2xl:text-3xl">
+        <header className="py-6 bg-santa-red md:flex md:justify-end">
+          <nav className="flex items-center mx-auto text-white max-w-screen-2xl font-heading justify-evenly md:w-1/2 md:mx-0 md:mr-0 md:text-xl">
             <Link href="/">
-              <a className="transition duration-500 ease-in-out 2xl:px-5 hover:text-black">
-                Home
-              </a>
+              <a className="nav__Link">Home</a>
             </Link>
-            <ul className="flex">
-              <li className="transition duration-500 ease-in-out md:px-5 hover:text-black">
-                <Link href="/create">
-                  <a>Create</a>
-                </Link>
-              </li>
-              <li className="transition duration-500 ease-in-out md:px-5 hover:text-black">
-                <Link href="/roadmap">
-                  <a>Roadmap</a>
-                </Link>
-              </li>
-              <li className="pr-0 transition duration-500 ease-in-out md:px-5 hover:text-black">
-                <a
-                  href="https://github.com/wildpow/covid-free-card-creator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Repo
-                </a>
-              </li>
-            </ul>
+            <Link href="/create">
+              <a className="nav__Link">Create</a>
+            </Link>
+
+            <Link href="/roadmap">
+              <a className="nav__Link">Roadmap</a>
+            </Link>
+            <a
+              className="nav__Link"
+              href="https://github.com/wildpow/covid-free-card-creator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repo
+            </a>
           </nav>
         </header>
         <main>{children}</main>
       </div>
-      <footer
-        className="relative flex py-10 overflow-hidden"
-        style={{ height: "350px" }}
-      >
-        <p className="self-end flex-1 py-8 text-lg font-bold text-center bg-santa-yellow">
+      <footer className="flex items-center justify-between overflow-hidden footer__text md:justify-center">
+        <p className="pl-10 mt-4 font-bold md:text-2xl md:pl-0 md:mt-10">
           Made with &nbsp;
           <span role="img" aria-label="heart emoji">
             &#x2764;&#xfe0f;
@@ -60,13 +49,13 @@ export default function Layout({ children }) {
             Wildpow
           </a>
         </p>
-        <div className="absolute -bottom-3 -right-2 covidGuy">
+        <div className="covidGuy md:absolute">
           <Image
             src="/images/scared-covid.png"
             alt="Cartoon elf"
             layout="responsive"
-            width={450}
-            height={350}
+            width={150}
+            height={150}
           />
         </div>
       </footer>
