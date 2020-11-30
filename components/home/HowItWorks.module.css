@@ -1,5 +1,4 @@
 .howItWorksRoot {
-  background-position: 121%;
   background-attachment: scroll;
   background-color: transparent;
   background-image: url(../../public/images/elf.png);
@@ -9,20 +8,37 @@
   width: 100%;
   display: flex;
   @apply mb-16;
+  background-position: 122%;
+  justify-content: center;
+  position: relative;
 }
 
 .howItWorksWrapper {
   width: 70%;
+  position: relative;
+  align-items: center;
 }
 
 .headingLine {
   position: relative;
+  display: inline-block;
+}
+.howItWorksRoot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50%;
+
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply bg-santa-yellow;
 }
 .headingLine::before {
   content: "";
   position: absolute;
-  left: -5%;
-  width: 106%;
+  left: 0;
+  width: 103%;
 
   height: 10px;
   top: 14px;
@@ -34,24 +50,31 @@
   .howItWorksRoot {
     justify-content: center;
   }
-  .headingLine::before {
-    width: 158%;
-    left: -55%;
+  .headingLine::before,
+  .howItWorksRoot::before {
     height: 15px;
   }
 }
 @media (min-width: 768px) {
-  .headingLine::before {
+  .headingLine::before,
+  .howItWorksRoot::before {
     height: 22px;
     top: 19px;
   }
+
+  .howItWorksRoot {
+    background-position: 122%;
+    justify-content: center;
+  }
+  .howItWorksWrapper {
+    align-items: center;
+  }
 }
 @media (min-width: 1024px) {
-  .headingLine::before {
+  .headingLine::before,
+  .howItWorksRoot::before {
     height: 30px;
     top: 30px;
-    width: 117%;
-    left: -30%;
   }
 }
 
@@ -62,18 +85,14 @@
   .howItWorksWrapper {
     width: 100%;
   }
-  .headingLine::before {
-    width: 112%;
-    left: -50%;
-  }
 }
 
 @media (min-width: 1536px) {
-  .headingLine::before {
-    width: 120%;
-    left: -60%;
-  }
   .howItWorksRoot {
     background-position: 122%;
+    justify-content: center;
+  }
+  .howItWorksWrapper {
+    align-items: center;
   }
 }
