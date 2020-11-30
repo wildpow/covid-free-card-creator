@@ -47,7 +47,7 @@ h6 {
     bottom: 10px;
   }
 }
-.heading::after {
+/* .heading::after {
   content: "";
   position: absolute;
   top: 30px;
@@ -56,9 +56,9 @@ h6 {
   background: #ffb90d;
   height: 26px;
   z-index: -1;
-}
+} */
 
-.heading2::after {
+/* .heading2::after {
   content: "";
   position: absolute;
   top: 30px;
@@ -67,7 +67,7 @@ h6 {
   background: #ffb90d;
   height: 26px;
   z-index: -1;
-}
+} */
 
 .footer__text {
   position: relative;

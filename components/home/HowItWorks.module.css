@@ -1,0 +1,79 @@
+.howItWorksRoot {
+  background-position: 121%;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: url(../../public/images/elf.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: 40% 100%;
+  width: 100%;
+  display: flex;
+  @apply mb-16;
+}
+
+.howItWorksWrapper {
+  width: 70%;
+}
+
+.headingLine {
+  position: relative;
+}
+.headingLine::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  width: 106%;
+
+  height: 10px;
+  top: 14px;
+  z-index: -1;
+  @apply bg-santa-yellow;
+}
+
+@media (min-width: 640px) {
+  .howItWorksRoot {
+    justify-content: center;
+  }
+  .headingLine::before {
+    width: 158%;
+    left: -55%;
+    height: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .headingLine::before {
+    height: 22px;
+    top: 19px;
+  }
+}
+@media (min-width: 1024px) {
+  .headingLine::before {
+    height: 30px;
+    top: 30px;
+    width: 117%;
+    left: -30%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .howItWorksRoot {
+    justify-content: flex-end;
+  }
+  .howItWorksWrapper {
+    width: 100%;
+  }
+  .headingLine::before {
+    width: 112%;
+    left: -50%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .headingLine::before {
+    width: 120%;
+    left: -60%;
+  }
+  .howItWorksRoot {
+    background-position: 122%;
+  }
+}

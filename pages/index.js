@@ -5,7 +5,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import Hand from "../components/hand";
 import styles from "../styles/Home.module.css";
-import { Hero, Distanced } from "../components/home";
+import { Hero, Distanced, HowItWorks } from "../components/home";
 
 export default function Home() {
   return (
@@ -15,39 +15,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Distanced />
-      {/* <article
-        className="relative flex py-20 my-20 overflow-hidden"
-        style={{ height: "60vh" }}
-      >
-        <div className="relative flex flex-col max-w-5xl mx-auto heading">
-          <h2 className="pb-2 mb-12 md:text-6xl ">How does it work?</h2>
-          <p className="max-w-2xl md:leading-10 md:text-3xl mb-14">
-            Pick background theme and colors. Fill in title, message and date.
-            Share, print or save *
-            <br />
-            <span className="font-bold md:text-lg">
-              * Some features coming soon
-            </span>
-          </p>
-          <Link href="/create">
-            <a className="btn">
-              <div className="h14">Try it out</div>
-              <div className="w-10 h-12 ml-6 text-white">
-                <Hand />
-              </div>
-            </a>
-          </Link>
-        </div>
-        <div className={`${styles.elfImage} absolute right-0 top-12`}>
-          <Image
-            src="/images/elf.jpg"
-            alt="Cartoon elf"
-            layout="responsive"
-            width={750}
-            height={900}
-          />
-        </div>
-      </article> */}
+      <HowItWorks />
       {/* <article className="relative flex py-20 pb-2 my-20 mb-10 overflow-hidden">
         <div className="relative flex flex-col max-w-5xl mx-auto heading2">
           <h2 className="pb-0 mb-0 md:text-6xl ">What are people saying?</h2>
