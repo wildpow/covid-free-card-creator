@@ -6,7 +6,7 @@ import Heading from "../components/heading";
 import Hand from "../components/hand";
 
 // keep for tests of more borders!!
-// import styles from "../styles/Output.module.css";
+import styles from "../styles/Output.module.css";
 
 export default function OutPutCard() {
   const { state } = useForm();
@@ -35,19 +35,20 @@ export default function OutPutCard() {
           <div
             style={{
               ...state.selectedBorderStyle,
-              width: "100%",
-              height: "90vh",
+
               backgroundColor: state.bgColor,
               color: state.textColor,
             }}
-            className={`${"styles.border"} max-w-md mx-auto mb-24`}
+            className={`${styles.outputRoot} max-w-md mx-auto mb-24`}
           >
             <div
               className={`${""} grid grid-cols-1 gap-10 p-6 relative h-full`}
             >
               <div className="flex justify-between">
                 <h3>{`Dear ${state.to},`}</h3>
-                <div className="text-sm">{state.date}</div>
+                <div className="text-sm">
+                  {new Date(state.date).toDateString()}
+                </div>
               </div>
               <p className="max-w-2xl mb-6 mr-1 md:text-xl lg:text-3xl lg:leading-10 lg:mb-12 xl:leading-relaxed sm:max-w-sm lg:max-w-2xl">
                 {state.message}
