@@ -45,15 +45,15 @@ export default function OutPutCard() {
               className={`${""} grid grid-cols-1 gap-10 p-6 relative h-full`}
             >
               <div className="flex justify-between">
-                <h3>{`Dear ${state.to},`}</h3>
-                <div className="text-sm">
+                <h3 className="self-center md:text-lg">{`Dear ${state.to},`}</h3>
+                <div className="text-sm underline">
                   {new Date(state.date).toDateString()}
                 </div>
               </div>
               <p className="max-w-2xl mb-6 mr-1 md:text-xl lg:text-3xl lg:leading-10 lg:mb-12 xl:leading-relaxed sm:max-w-sm lg:max-w-2xl">
                 {state.message}
               </p>
-              <span className="self-center font-bold">{`Love, ${state.from}`}</span>
+              <span className="self-center font-bold md:text-lg">{`Love, ${state.from}`}</span>
             </div>
           </div>
         )}

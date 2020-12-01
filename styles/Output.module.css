@@ -30,3 +30,8 @@
     height: 70vh;
   }
 }
+@media (min-width: 1024px) {
+  .outputRoot {
+    height: 90vh;
+  }
+}
