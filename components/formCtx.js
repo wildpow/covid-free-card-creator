@@ -12,6 +12,8 @@ const initialState = {
     "Even though I have not seen you since February you are in my thoughts",
   from: "Mr. Ninja Tiger",
   date: newDate.toISOString().split("T")[0],
+  bgColor: "#ffffff",
+  textColor: "#000000",
 };
 const reducer = (state, action) => {
   return { ...state, [action.type]: action.payload };

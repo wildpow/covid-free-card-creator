@@ -11,7 +11,7 @@ export default function OutPutCard() {
         <title>Card Creator -- Output</title>
       </Head>
       <h2>Output of card</h2>
-      <div>
+      <div style={{ backgroundColor: state.bgColor, color: state.textColor }}>
         <h3>{`Dear ${state.to},`}</h3>
         <div>{state.date}</div>
         <p>{state.message}</p>
