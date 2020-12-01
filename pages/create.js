@@ -42,7 +42,7 @@ export default function CreateCard() {
       <Head>
         <title>Card Creator -- Create Card</title>
       </Head>
-      <article className="py-12">
+      <article className={`${styles.createWrapper} py-12`}>
         <Heading text="Create Card" />
         <div className="max-w-md px-4 mx-auto">
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
@@ -115,11 +115,9 @@ export default function CreateCard() {
               </label>
             </div>
             <div>
-              <div
-                className={`${styles.headingWrapper} w-full justify-center flex mt-5`}
-              >
+              <div className={` w-full justify-center flex mt-5`}>
                 <h3
-                  className={`${styles.headingLine} mb-4 text-xl sm:text-2xl md:text-4xl  lg:mb-10 xl:mb-16`}
+                  className={`${styles.headingLine} mb-4 text-xl sm:text-2xl md:text-4xl  lg:mb-6 xl:mb-8`}
                 >
                   Border theme
                 </h3>
@@ -135,17 +133,17 @@ export default function CreateCard() {
                         name={`border-${i}`}
                         id={`border-${i}`}
                         checked={item.checked}
-                        className={`${styles.borderOneInput}`}
+                        className={`${styles.borderOneInput} w-full h-full`}
                         onChange={(e) => toggleBgCheck(e, i)}
                       />
                       <label
                         htmlFor={`border-${i}`}
-                        className={`${styles.borderOneLabel}`}
+                        className={`${styles.borderOneLabel} ${styles.container} w-full h-full`}
                       >
                         <Image
-                          layout="fixed"
-                          width={250}
-                          height={250}
+                          layout="responsive"
+                          width={350}
+                          height={350}
                           src={item.src}
                           alt={item.alt}
                         />
