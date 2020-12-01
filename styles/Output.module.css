@@ -1,0 +1,21 @@
+.border {
+  border: 20px solid pink;
+  border-image-source: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png);
+  border-image-slice: 20 22;
+  border-image-repeat: round;
+}
+
+.borderCool {
+  border-style: solid;
+  border-width: 63px 77px 60px 68px;
+  border-image: url(/images/border3.png) 1000 900 stretch stretch;
+  border-width: 50px;
+}
+
+.border3 {
+  border-image-slice: 1366 1166 1216 1150;
+  border-image-width: 40px 40px 40px 40px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round round;
+  border-image-source: url(/images/border3.svg);
+}
