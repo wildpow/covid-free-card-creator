@@ -1,4 +1,4 @@
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 import styles from "../styles/Heading.module.css";
 
 export default function Heading({ text }) {
@@ -14,7 +14,7 @@ export default function Heading({ text }) {
 }
 
 Heading.propTypes = {
-  text: PropsTypes.string,
+  text: PropTypes.string,
 };
 
 Heading.defaultProps = {
