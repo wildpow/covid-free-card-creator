@@ -7,13 +7,25 @@ export const useForm = () => useContext(FormCtx);
 const newDate = new Date();
 
 const initialState = {
-  to: "Miss Pacman",
-  message:
-    "Even though I have not seen you since February you are in my thoughts",
-  from: "Mr. Ninja Tiger",
+  to: "",
+  message: "",
+  from: "",
   date: newDate.toISOString().split("T")[0],
   bgColor: "#ffffff",
   textColor: "#000000",
+  borderInfo: [
+    {
+      checked: false,
+      src: "/images/border.svg",
+      alt: "a pen scribble border",
+    },
+    {
+      checked: false,
+      src: "/images/christmas1.png",
+      alt: "a missle toe background border green and red",
+    },
+  ],
+  selectedBorderSrc: "",
 };
 const reducer = (state, action) => {
   return { ...state, [action.type]: action.payload };

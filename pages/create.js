@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -10,24 +9,14 @@ import Heading from "../components/heading";
 import styles from "../styles/Create.module.css";
 
 export default function CreateCard() {
+  const router = useRouter();
+
   const { state, dispatch } = useForm();
-  const [bgChecked, setBgChecked] = useState([
-    {
-      checked: false,
-      src: "/images/border.svg",
-      alt: "a pen scribble border",
-    },
-    {
-      checked: false,
-      src: "/images/christmas1.png",
-      alt: "a missle toe background border green and red",
-    },
-  ]);
+
   const toggleBgCheck = (e, changedIndex) => {
     const { checked } = e.target;
-
-    const newBgChecks = bgChecked;
-    bgChecked.map((_, i) => {
+    const newBgChecks = state.borderInfo;
+    state.borderInfo.map((_, i) => {
       if (i === changedIndex) {
         newBgChecks[i].checked = checked;
       } else {
@@ -35,13 +24,18 @@ export default function CreateCard() {
       }
       return null;
     });
-    setBgChecked([...newBgChecks]);
+    dispatch({ type: "borderInfo", payload: [...newBgChecks] });
   };
-  const router = useRouter();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const checkedBorder = state.borderInfo.filter((item) => item.checked);
+    const borderSrc = checkedBorder.length === 1 ? checkedBorder[0].src : "";
+    // console.log(checkedBorder);
+    dispatch({ type: "selectedBorderSrc", payload: borderSrc });
     router.push("/output");
   };
+
   return (
     <Layout>
       <Head>
@@ -49,7 +43,6 @@ export default function CreateCard() {
       </Head>
       <article className="py-12" />
       <Heading text="Create Card" />
-
       <div className="max-w-md mx-auto">
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
           <label htmlFor="to" className="block">
@@ -58,6 +51,7 @@ export default function CreateCard() {
               type="text"
               name="to"
               id="to"
+              placeholder="Miss Pacman"
               className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               required
               value={state.to}
@@ -73,6 +67,7 @@ export default function CreateCard() {
               type="text"
               name="from"
               id="from"
+              placeholder="Mr. Pacman"
               required
               value={state.from}
               onChange={(e) =>
@@ -99,6 +94,9 @@ export default function CreateCard() {
             <span className="text-gray-700">Message</span>
             <textarea
               name="message"
+              placeholder="Even though I have not seen you since February you are in
+              my thoughts. I dream of the day we can once again eat fruit and go
+              ghost hunting again."
               id="message"
               cols="30"
               rows="10"
@@ -142,7 +140,7 @@ export default function CreateCard() {
                 <ul
                   className={`${styles.borderGrid} grid justify-center gap-6 justify-items-center`}
                 >
-                  {bgChecked.map((item, i) => (
+                  {state.borderInfo.map((item, i) => (
                     <li key={item.src}>
                       <input
                         type="checkbox"
@@ -169,7 +167,9 @@ export default function CreateCard() {
               </fieldset>
             </div>
           </div>
-          <button type="submit">Submit</button>
+          <button className="btn2" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </Layout>
