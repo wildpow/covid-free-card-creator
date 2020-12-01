@@ -24,7 +24,6 @@ export default function OutPutCard() {
               doesn&apos;t exist because you haven&apos;t created it yet. On
               second thought it&apos;s nothing like the chicken and the egg
               because creating a card definitely comes first. Anyways, U.S
-              Elections... right... that happened...
             </p>
             <p className="max-w-2xl mb-6 mr-1 md:text-xl lg:text-3xl lg:leading-10 lg:mb-12 xl:leading-relaxed">
               {" "}
