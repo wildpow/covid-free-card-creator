@@ -9,3 +9,5 @@ Built with:
 
 Check it out [here](https://covid-free-card-creator.vercel.app/)
 Deployed on [Vercel](https://vercel.com/)
+
+(test)
