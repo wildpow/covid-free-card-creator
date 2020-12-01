@@ -88,7 +88,7 @@ export default function CreateCard() {
                   "Even though I have not seen you since February you are in my thoughts. I dream of the day we can once again eat fruit and go ghost hunting again.",
               }}
             />
-            <div className="grid justify-center grid-cols-2 gap-6 justify-items-center">
+            <div className="flex justify-around">
               <label htmlFor="bgColor" className="flex">
                 <span className="pr-2 text-gray-700">Bg Color</span>
                 <input
@@ -113,40 +113,49 @@ export default function CreateCard() {
                   }
                 />
               </label>
-              <div>
-                <h3>Border theme</h3>
-                <fieldset>
-                  <ul
-                    className={`${styles.borderGrid} grid justify-center gap-6 justify-items-center`}
-                  >
-                    {state.borderInfo.map((item, i) => (
-                      <li key={item.src}>
-                        <input
-                          type="checkbox"
-                          name={`border-${i}`}
-                          id={`border-${i}`}
-                          checked={item.checked}
-                          className={`${styles.borderOneInput}`}
-                          onChange={(e) => toggleBgCheck(e, i)}
-                        />
-                        <label
-                          htmlFor={`border-${i}`}
-                          className={`${styles.borderOneLabel}`}
-                        >
-                          <Image
-                            layout="fixed"
-                            width={150}
-                            height={150}
-                            src={item.src}
-                            alt={item.alt}
-                          />
-                        </label>
-                      </li>
-                    ))}
-                  </ul>
-                </fieldset>
-              </div>
             </div>
+            <div>
+              <div
+                className={`${styles.headingWrapper} w-full justify-center flex mt-5`}
+              >
+                <h3
+                  className={`${styles.headingLine} mb-4 text-xl sm:text-2xl md:text-4xl  lg:mb-10 xl:mb-16`}
+                >
+                  Border theme
+                </h3>
+              </div>
+              <fieldset className="">
+                <ul
+                  className={`${styles.container} flex flex-nowrap  w-full mt-1 border-2 border-gray-300 rounded-md shadow-sm`}
+                >
+                  {state.borderInfo.map((item, i) => (
+                    <li key={item.src} className={`${styles.element}`}>
+                      <input
+                        type="checkbox"
+                        name={`border-${i}`}
+                        id={`border-${i}`}
+                        checked={item.checked}
+                        className={`${styles.borderOneInput}`}
+                        onChange={(e) => toggleBgCheck(e, i)}
+                      />
+                      <label
+                        htmlFor={`border-${i}`}
+                        className={`${styles.borderOneLabel}`}
+                      >
+                        <Image
+                          layout="fixed"
+                          width={250}
+                          height={250}
+                          src={item.src}
+                          alt={item.alt}
+                        />
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </fieldset>
+            </div>
+
             <button className="btn2" type="submit">
               Submit
             </button>

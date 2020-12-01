@@ -1,6 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from "prop-types";
 
+// Some problems with this component:
+// 1. htmlFor prop has to match context state object.
+// 2. Disabled eslint prop spreading rule. Only way I could think of picking up all the
+//    extra props for things like textareas.
+// 3. My color inputs have some different styling. Not sure I want to spend the time
+//    right now making this component universal enough to passed down those extra styles.
+// 4. Not sure I solved the Create.js component complexity issue..
+
 export default function Input({
   htmlFor,
   label,
