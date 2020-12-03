@@ -1,6 +1,20 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
+import PropTypes from "prop-types";
+import { Flipped } from "react-flip-toolkit";
+import LinkElement from "./Link";
+
+const links = [
+  {
+    href: "/",
+    name: "Home",
+  },
+  {
+    href: "/create",
+    name: "Create",
+  },
+  { href: "/roadmap", name: "Roadmap" },
+];
 
 export default function Layout({ children }) {
   return (
@@ -30,16 +44,15 @@ export default function Layout({ children }) {
       <div className="content">
         <header className="py-6 bg-santa-red md:flex md:justify-end">
           <nav className="flex items-center mx-auto text-white max-w-screen-2xl font-heading justify-evenly md:w-1/2 md:mx-0 md:mr-0 md:text-xl">
-            <Link href="/">
-              <a className="nav__Link">Home</a>
-            </Link>
-            <Link href="/create">
-              <a className="nav__Link">Create</a>
-            </Link>
-
-            <Link href="/roadmap">
-              <a className="nav__Link">Roadmap</a>
-            </Link>
+            {links.map((link) => (
+              <LinkElement
+                href={link.href}
+                activeClassName="activeNavLink"
+                key={link.href}
+              >
+                <a className="nav__Link">{link.name}</a>
+              </LinkElement>
+            ))}
             <a
               className="nav__Link"
               href="https://github.com/wildpow/covid-free-card-creator"
@@ -50,7 +63,9 @@ export default function Layout({ children }) {
             </a>
           </nav>
         </header>
-        <main>{children}</main>
+        <Flipped flipId="page" spring="veryGentle">
+          <main>{children}</main>
+        </Flipped>
       </div>
       <footer className="flex items-center justify-between overflow-hidden footer__text md:justify-center">
         <p className="pl-10 mt-4 font-bold md:text-2xl md:pl-0 md:mt-10">
@@ -81,3 +96,7 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
