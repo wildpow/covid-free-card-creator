@@ -23,11 +23,11 @@ export default function OutPutCard() {
               Our bad! It&apos;s a chicken and the egg kind of thing. Your card
               doesn&apos;t exist because you haven&apos;t created it yet. On
               second thought it&apos;s nothing like the chicken and the egg
-              because creating a card definitely comes first. Anyways, U.S
+              because creating a card definitely comes first.
             </p>
             <p className="max-w-2xl mb-6 mr-1 md:text-xl lg:text-3xl lg:leading-10 lg:mb-12 xl:leading-relaxed">
               {" "}
-              Anywas, U.S Elections... right... that happened...
+              Anyways, U.S Elections... right... that happened...
             </p>
           </div>
         ) : (
