@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import PropTypes from "prop-types";
-import { Flipped } from "react-flip-toolkit";
 import LinkElement from "./Link";
 
 const links = [
@@ -63,9 +62,7 @@ export default function Layout({ children }) {
             </a>
           </nav>
         </header>
-        <Flipped flipId="page" spring="veryGentle">
-          <main>{children}</main>
-        </Flipped>
+        <main>{children}</main>
       </div>
       <footer className="flex items-center justify-between overflow-hidden footer__text md:justify-center">
         <p className="pl-10 mt-4 font-bold md:text-2xl md:pl-0 md:mt-10">

@@ -1,10 +1,9 @@
 import Head from "next/head";
-import Layout from "../components/layout";
 import Heading from "../components/heading";
 
 export default function Roadmap() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Card Creator -- Roadmap</title>
       </Head>
@@ -81,6 +80,6 @@ export default function Roadmap() {
           </div>
         </div>
       </article>
-    </Layout>
+    </>
   );
 }

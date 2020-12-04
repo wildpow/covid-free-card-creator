@@ -1,14 +1,14 @@
 import "tailwindcss/tailwind.css";
-import { Flipper } from "react-flip-toolkit";
 import "../styles/globals.css";
 import { FormProvider } from "../components/formCtx";
+import Layout from "../components/layout";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
     <FormProvider>
-      <Flipper flipKey={router.asPath}>
+      <Layout>
         <Component {...pageProps} />
-      </Flipper>
+      </Layout>
     </FormProvider>
   );
 }

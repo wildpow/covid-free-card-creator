@@ -3,7 +3,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Layout from "../components/layout";
 import { useForm } from "../components/formCtx";
 import Heading from "../components/heading";
 import styles from "../styles/Create.module.css";
@@ -38,7 +37,7 @@ export default function CreateCard() {
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Card Creator -- Create Card</title>
       </Head>
@@ -160,6 +159,6 @@ export default function CreateCard() {
           </form>
         </div>
       </article>
-    </Layout>
+    </>
   );
 }

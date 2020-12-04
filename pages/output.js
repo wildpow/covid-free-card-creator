@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../components/layout";
 import { useForm } from "../components/formCtx";
 import Heading from "../components/heading";
-import Hand from "../components/hand";
+// import Hand from "../components/hand";
 
 // keep for tests of more borders!!
 import styles from "../styles/Output.module.css";
@@ -11,7 +10,7 @@ import styles from "../styles/Output.module.css";
 export default function OutPutCard() {
   const { state } = useForm();
   return (
-    <Layout>
+    <>
       <Head>
         <title>Card Creator -- Output</title>
       </Head>
@@ -65,6 +64,6 @@ export default function OutPutCard() {
           </a>
         </Link>
       </article>
-    </Layout>
+    </>
   );
 }
