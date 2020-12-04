@@ -46,23 +46,6 @@ export default function CreateCard() {
         <div className="max-w-md px-4 mx-auto">
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
             <Input
-              htmlFor="to"
-              label="To"
-              value={state.to}
-              onChange={dispatch}
-              type="text"
-              rest={{ placeholder: "Miss Pacman" }}
-            />
-            <Input
-              htmlFor="from"
-              label="From"
-              value={state.from}
-              onChange={dispatch}
-              type="text"
-              placeholder="Mr. Pacman"
-              rest={{ placeholder: "Mr. Pacman" }}
-            />
-            <Input
               htmlFor="date"
               label="Date"
               value={state.date}
@@ -72,6 +55,14 @@ export default function CreateCard() {
               rest={{ pattern: "d{4}-d{2}-d{2}" }}
             />
             <Input
+              htmlFor="greeting"
+              label="Greeting"
+              value={state.to}
+              onChange={dispatch}
+              type="text"
+              rest={{ placeholder: "Dear, Miss Pacman" }}
+            />
+            <Input
               htmlFor="message"
               label="Message"
               value={state.message}
@@ -79,13 +70,20 @@ export default function CreateCard() {
               type="textarea"
               required
               rest={{
-                pattern: "d{4}-d{2}-d{2}",
                 cols: "30",
                 rows: "10",
                 spellCheck: true,
                 placeholder:
                   "Even though I have not seen you since February you are in my thoughts. I dream of the day we can once again eat fruit and go ghost hunting again.",
               }}
+            />
+            <Input
+              htmlFor="signature"
+              label="Signature"
+              value={state.from}
+              onChange={dispatch}
+              type="text"
+              rest={{ placeholder: "Love, Mr. Pacman" }}
             />
             <div className="flex justify-around">
               <label htmlFor="bgColor" className="flex">
