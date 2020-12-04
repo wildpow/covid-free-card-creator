@@ -1,4 +1,6 @@
-## Changes sense initial release.
+# Change log
+
+All notable changes to this project will be documented in this file.
 
 - Active styles for navigation.
 - Input labels, names and positions make more sense.
