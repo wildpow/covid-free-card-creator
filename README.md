@@ -17,8 +17,11 @@ is deployed on [Vercel](https://vercel.com/)
 
 ### [Development branch](https://covid-free-card-creator-git-changes-after-deadline.wildair.vercel.app/)
 
-I will be continually making updates to this repo under the [`Changes-after-deadline`](https://github.com/wildpow/covid-free-card-creator/tree/Changes-after-deadline) branch and will be deployed [here](https://covid-free-card-creator-git-changes-after-deadline.wildair.vercel.app/).
-<span style="color: darkred; font-weight: bold;">Commits will not be merged due to being made after the¬†allotted¬†timeframe.¬†</span>
+Any new commits will be under the `Changes-after-deadline` branch and <span style="color: darkred; font-weight: bold;">will not be merged due to being made after the allotted timeframe.</span>
+
+- [Branch](https://github.com/wildpow/covid-free-card-creator/tree/Changes-after-deadline)
+- [Changelog](https://github.com/wildpow/covid-free-card-creator/blob/Changes-after-deadline/CHANGELOG.md)
+- [Deployment](https://covid-free-card-creator-git-changes-after-deadline.wildair.vercel.app/)
 
 ### Reasons for continued development:
 
