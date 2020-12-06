@@ -14,21 +14,3 @@ Built with:
 is deployed on [Vercel](https://vercel.com/)
 
 ---
-
-### [Development branch](https://covid-free-card-creator-git-changes-after-deadline.wildair.vercel.app/)
-
-Any new commits will be under the `Changes-after-deadline` branch and <span style="color: darkred; font-weight: bold;">will not be merged due to being made after the allotted timeframe.</span>
-
-- [Branch](https://github.com/wildpow/covid-free-card-creator/tree/Changes-after-deadline)
-- [Changelog](https://github.com/wildpow/covid-free-card-creator/blob/Changes-after-deadline/CHANGELOG.md)
-- [Deployment](https://covid-free-card-creator-git-changes-after-deadline.wildair.vercel.app/)
-
-### Reasons for continued development:
-
-- I had fun building this.
-- I'm interested in learning technologies I was planning on using in future releases like PDF creation, drag/drop, and maybe HTML5 canvas.
-- I could use another portfolio piece.
-- I couldn't find an existing example repo of or blog post about a React greeting/Christmas card creator even though there are web apps that do this, which makes the idea unique.
-- I wasn't completely happy or satisfied with what I produced in the given time and would like to see for myself what I could do under my own motivation.
-
----
