@@ -1,18 +1,14 @@
 import "tailwindcss/tailwind.css";
-import { Flipper, Flipped } from "react-flip-toolkit";
 import "../styles/globals.css";
 import { FormProvider } from "../components/formCtx";
+import Layout from "../components/layout";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
     <FormProvider>
-      <Flipper flipKey={router.asPath}>
-        <Flipped flipId="page" spring="veryGentle">
-          <div>
-            <Component {...pageProps} />
-          </div>
-        </Flipped>
-      </Flipper>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </FormProvider>
   );
 }

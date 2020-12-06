@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
+import PropTypes from "prop-types";
 
 const FormCtx = createContext(null);
 
@@ -12,9 +13,9 @@ const initialState = {
   // message:
   //   "Even though I have not seen you since February you are in my thoughts. I dream of the day we can once again eat fruit and go ghost hunting again.",
   // from: "Mr. Ninja Tiger",
-  to: "",
+  greeting: "",
   message: "",
-  from: "",
+  signature: "",
   date: newDate.toISOString().split("T")[0],
   bgColor: "#ffffff",
   textColor: "#000000",
@@ -62,4 +63,8 @@ export const FormProvider = ({ children }) => {
   return (
     <FormCtx.Provider value={{ state, dispatch }}>{children}</FormCtx.Provider>
   );
+};
+
+FormProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

@@ -6,7 +6,7 @@ export default function Quotes() {
   return (
     <article>
       <Heading text=" What are people saying?" />
-      <div className={`${styles.quotesWrapper}`}>
+      <div className={`${styles.quotesWrapper} pt-3 -mt-2`}>
         <div
           className={`${styles.quoteCard} w-10/12 self-center  xsm:w-12/12  xsm:self-start md:w-full md:self-center md:m-auto`}
         >
